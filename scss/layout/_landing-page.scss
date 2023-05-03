@@ -1,0 +1,137 @@
+@use '../global/breakpoints' as b;
+@use '../global/functions' as f;
+
+.landing-page {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	height: 88vh;
+
+	@include b.break('large') {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100%;
+	}
+
+	&__images {
+		display: flex;
+		margin: 0 auto;
+		width: 100%;
+
+		@include b.break('large') {
+			grid-column: 2/3;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		justify-content: center;
+		max-width: f.rem(400);
+		margin: 0 auto;
+
+		@include b.break('large') {
+			max-width: 580px;
+			position: absolute;
+			top: 30vh;
+			right: f.rem(200);
+		}
+
+		@include b.break('x-large') {
+			right: f.rem(240);
+		}
+	}
+
+	&__tablette-pattern {
+		position: absolute;
+		top: 0;
+		right: 0;
+		// max-width: f.rem(700);
+		// width: clamp(350px, 350px + 28vw, 570px);
+		width: 80%;
+		max-width: 450px;
+		z-index: -1;
+		// clip: rect(0, auto, auto, 0);
+
+		@include b.break('medium') {
+			right: f.rem(-50);
+			top: f.rem(-200);
+			// transform: translate(-50px, -200px);
+			max-width: 800px;
+		}
+
+		@include b.break('large') {
+			position: absolute;
+			max-width: f.rem(800);
+			right: 0;
+			top: 0;
+			// transform: translate(60px, -160px);
+		}
+
+		// @include b.break('x-large') {
+		//     max-width: f.rem(900);
+		//     // top: f.rem(-250);
+		// }
+	}
+
+	&__content {
+		padding: 0 f.rem(30);
+		display: flex;
+
+		align-items: center;
+		flex-direction: column;
+
+		@include b.break('large') {
+			grid-column: 1/2;
+			grid-row: 1/1;
+			justify-content: center;
+			align-items: flex-start;
+			padding-left: f.rem(200);
+		}
+
+		@include b.break('x-large') {
+			padding-left: f.rem(280);
+		}
+	}
+
+	&__heading {
+		font-size: f.rem(36);
+		line-height: 1.3;
+		margin: f.rem(20) auto;
+		text-align: center;
+		max-width: f.rem(350);
+
+		@include b.break('large') {
+			font-size: f.rem(45);
+			max-width: f.rem(400);
+			text-align: left;
+			margin: f.rem(20) 0;
+		}
+
+		@include b.break('x-large') {
+			font-size: f.rem(55);
+			max-width: f.rem(490);
+		}
+	}
+
+	&__text {
+		font-size: f.rem(17);
+		line-height: 1.8;
+		color: var(--dark-grayish-blue);
+		text-align: center;
+		max-width: f.rem(350);
+
+		@include b.break('large') {
+			text-align: left;
+		}
+	}
+
+	&__tablette-pattern-second {
+		position: absolute;
+		width: clamp(f.rem(350), f.rem(350) + 20vw, f.rem(1200));
+		z-index: -1;
+		right: f.rem(-280);
+
+		@include b.break('large') {
+			display: none;
+		}
+	}
+}

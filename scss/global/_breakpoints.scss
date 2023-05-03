@@ -1,0 +1,37 @@
+@use 'functions' as f;
+
+$breakpoints: (
+	'medium': f.em(800),
+	'large': f.em(1440),
+	'x-large': f.em(1800),
+);
+
+@mixin break($size) {
+	@media (min-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+@mixin itemsbgc {
+	background: linear-gradient(90deg, #fff 10%, var(--very-pale-red) 10%);
+
+	@media (min-width: 400px) {
+		background: linear-gradient(90deg, #fff 15%, var(--very-pale-red) 15%);
+	}
+
+	@media (min-width: 450px) {
+		background: linear-gradient(90deg, #fff 20%, var(--very-pale-red) 20%);
+	}
+
+	@media (min-width: 500px) {
+		background: linear-gradient(90deg, #fff 25%, var(--very-pale-red) 25%);
+	}
+
+	@media (min-width: 600px) {
+		background: linear-gradient(90deg, #fff 27%, var(--very-pale-red) 27%);
+	}
+
+	@media (min-width: 650px) {
+		background: linear-gradient(90deg, #fff 30%, var(--very-pale-red) 30%);
+	}
+}

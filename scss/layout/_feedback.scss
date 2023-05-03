@@ -1,0 +1,145 @@
+@use '../global/breakpoints' as b;
+@use '../global/functions' as f;
+
+.feedback {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+
+	@include b.break('large') {
+		// flex-direction: column;
+		justify-content: center;
+	}
+
+	&__heading {
+		font-size: f.rem(27);
+		margin: 0 0 f.rem(80) 0;
+		// min-height: f.rem(300);
+
+		@include b.break('large') {
+			margin-top: f.rem(150);
+		}
+	}
+
+	.container {
+		align-self: center;
+		position: relative;
+		min-width: 400px;
+		min-height: 230px;
+
+		@include b.break('large') {
+			display: flex;
+			flex-direction: row;
+			position: relative;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: var(--very-light-gray);
+		margin: 0 f.rem(15);
+		top: 0;
+		left: 0;
+		min-height: f.rem(230);
+		justify-content: center;
+		gap: f.rem(20);
+		max-width: f.rem(400);
+		position: absolute;
+		opacity: 0;
+		transition: opacity 1s;
+
+		@include b.break('large') {
+			opacity: 100;
+			position: inherit;
+			margin-bottom: f.rem(60);
+		}
+
+		&.test {
+			opacity: 100;
+		}
+
+		&-image {
+			width: f.rem(70);
+			position: absolute;
+			top: f.rem(-35);
+		}
+
+		&-heading {
+			font-size: f.rem(16);
+		}
+
+		&-text {
+			color: var(--dark-grayish-blue);
+			text-align: center;
+			padding: 0 f.rem(20);
+		}
+	}
+
+	&__slider {
+		width: f.rem(77);
+		height: f.rem(20);
+		margin: f.rem(20) 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: f.rem(7);
+		margin-bottom: f.rem(35);
+
+		@include b.break('large') {
+			display: none;
+		}
+
+		&-dot {
+			width: f.rem(15);
+			height: f.rem(15);
+			border: f.rem(2) solid var(--bright-red);
+			border-radius: 50%;
+
+			&.active {
+				background-color: var(--bright-red);
+			}
+		}
+	}
+
+	&-footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 40vh;
+		width: 100%;
+		background-color: var(--bright-red);
+		gap: f.rem(30);
+		margin-top: f.rem(220);
+
+		@include b.break('large') {
+			flex-direction: row;
+			justify-content: space-between;
+			height: 27vh;
+			padding: 0 f.rem(230);
+		}
+
+		&__heading {
+			color: var(--very-light-gray);
+			font-size: f.rem(37);
+			line-height: 1.3;
+			font-weight: 600;
+			text-align: center;
+			max-width: f.rem(320);
+
+			@include b.break('large') {
+				text-align: left;
+				max-width: f.rem(500);
+			}
+		}
+
+		&__tablet {
+			position: absolute;
+			width: 100px;
+		}
+	}
+}

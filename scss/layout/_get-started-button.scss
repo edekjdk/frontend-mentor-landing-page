@@ -1,0 +1,46 @@
+@use '../global/breakpoints' as b;
+@use '../global/functions' as f;
+
+.get-started-button {
+	// display: none;
+	justify-self: center;
+	border: none;
+	width: f.rem(150);
+	height: f.rem(45);
+	border-radius: f.rem(35);
+	color: var(--very-light-gray);
+	font-weight: 400;
+	background-color: var(--bright-red);
+	cursor: pointer;
+	-webkit-box-shadow: 0px 18px 9px -16px rgba(247, 88, 54, 1);
+	-moz-box-shadow: 0px 18px 9px -16px rgba(247, 88, 54, 1);
+	box-shadow: 0px 18px 9px -16px rgba(247, 88, 54, 1);
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: hsl(12, 95%, 74%);
+	}
+
+	&--main-nav {
+		display: none;
+
+		@include b.break('large') {
+			display: block;
+		}
+	}
+
+	&--landing-page {
+		margin-top: 50px;
+	}
+
+	&--white {
+		background-color: var(--very-light-gray);
+		color: var(--bright-red);
+		font-weight: 500;
+	}
+
+	&--footer {
+		width: f.rem(75);
+		box-shadow: none;
+	}
+}

@@ -1,0 +1,138 @@
+@use '../global/functions' as f;
+@use '../global/breakpoints' as b;
+
+.company-info {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	padding-top: f.rem(20);
+
+	@include b.break('large') {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: f.rem(20);
+
+		&__heading {
+			font-size: f.rem(30);
+			max-width: f.rem(260);
+			line-height: 1.5;
+			text-align: center;
+			margin-top: f.rem(70);
+
+			@include b.break('large') {
+				text-align: left;
+				max-width: f.rem(360);
+				margin-top: f.rem(0);
+			}
+
+			@include b.break('x-large') {
+				font-size: f.rem(45);
+				max-width: f.rem(400);
+			}
+		}
+
+		&__text {
+			color: var(--dark-grayish-blue);
+			line-height: 1.8;
+			max-width: f.rem(340);
+			text-align: center;
+			margin-bottom: f.rem(80);
+
+			@include b.break('large') {
+				text-align: left;
+				max-width: f.rem(360);
+			}
+
+			@include b.break('x-large') {
+				max-width: f.rem(400);
+			}
+		}
+	}
+
+	.list {
+		display: flex;
+		flex-direction: column;
+		gap: f.rem(40);
+
+		@include b.break('large') {
+			justify-content: center;
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			gap: f.rem(10);
+
+			&-text {
+				color: var(--dark-grayish-blue);
+				line-height: 1.8;
+				padding: 0 f.rem(25);
+				align-self: center;
+				max-width: f.rem(400);
+				text-align: left;
+			}
+
+			&-heading {
+				@include b.itemsbgc;
+				// background-color: var(--very-pale-red);
+				height: f.rem(40);
+				width: 100%;
+				// align-items: flex-start;
+				align-self: flex-end;
+				// justify-content: flex-start;
+
+				@include b.break('medium') {
+					background: none;
+					width: 100%;
+				}
+			}
+
+			&-header {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				// padding-left: f.rem(20);
+
+				max-width: f.rem(350);
+				gap: f.rem(10);
+
+				margin: 0 auto;
+			}
+
+			&-number {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--very-light-gray);
+				background-color: var(--bright-red);
+				width: f.rem(60);
+				height: f.rem(40);
+				border-radius: f.rem(20);
+			}
+		}
+	}
+}
+
+.tablet {
+	display: none;
+	position: absolute;
+
+	@include b.break('large') {
+		display: block;
+		width: f.rem(800);
+		left: f.rem(-500);
+		bottom: f.rem(-1300);
+	}
+
+	@include b.break('x-large') {
+		width: f.rem(900);
+	}
+
+	// display: none;
+}
