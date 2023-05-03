@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, user-scalable=yes">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/style.css">
     <title>Manage landing page</title>
 </head>
 
 <body>
+    <!-- ####################################################################################
+                                        Navigation
+    #################################################################################### -->
     <nav class="main-nav">
         <div class="shadow"></div>
         <img src="images/logo.svg" alt="website-logo" class="main-nav__logo">
@@ -30,6 +35,9 @@
         <button class="get-started-button get-started-button--main-nav">Get Started</button>
     </nav>
     <main>
+        <!-- ####################################################################################
+                                        Landing page
+        #################################################################################### -->
         <section class="landing-page">
             <div class="landing-page__images">
                 <img src="images/illustration-intro.svg" alt="ilustration-landing-page" class="landing-page__image">
@@ -48,6 +56,9 @@
                     class="landing-page__tablette-pattern-second">
             </article>
         </section>
+        <!-- ####################################################################################
+                                        Company information
+        #################################################################################### -->
         <section class="company-info">
             <article class="info">
                 <h2 class="info__heading">
@@ -61,7 +72,6 @@
             <article class="list">
                 <div class="list__item">
                     <div class="list__item-heading">
-                        
                         <h4 class="list__item-header">
                             <span class="list__item-number">01</span>
                             Track company-wide progress
@@ -75,89 +85,101 @@
                 </div>
                 <div class="list__item">
                     <div class="list__item-heading">
-                        
+
                         <h4 class="list__item-header">
                             <span class="list__item-number">02</span>
                             Advanced built-in reports
                         </h4>
                     </div>
-                        <p class="list__item-text">
-                            Set internal delivery estimates and track progress toward company goals. Our customisable
-                            dashboard helps you build out the reports you need to keep key stakeholders informed.
-                        </p>
-                    </div>
+                    <p class="list__item-text">
+                        Set internal delivery estimates and track progress toward company goals. Our customisable
+                        dashboard helps you build out the reports you need to keep key stakeholders informed.
+                    </p>
+                </div>
                 <div class="list__item">
                     <div class="list__item-heading">
-                        
+
                         <h4 class="list__item-header">
                             <span class="list__item-number">03</span>
-                            Everything you need in one place</h4>
+                            Everything you need in one place
+                        </h4>
                     </div>
                     <p class="list__item-text">
                         Stop jumping from one service to another to communicate, store files, track tasks and share
                         documents. Manage offers an all-in-one team productivity solution.
                     </p>
                 </div>
-            </aticle>
-            <img src="images/bg-tablet-pattern.svg" alt="teb" class="tablet">
+                </aticle>
+                <img src="images/bg-tablet-pattern.svg" alt="teb" class="tablet">
         </section>
+        <!-- ####################################################################################
+                                        Feedback
+        #################################################################################### -->
         <section class="feedback">
             <h3 class="feedback__heading">What they've said</h3>
 
             <article class="container">
-                <div data-slideNum=1 class="feedback__content ">
+                <div class="feedback__content ">
                     <img src="images/avatar-ali.png" alt="ali" class="feedback__content-image">
                     <h5 class="feedback__content-heading">Ali Bravo</h5>
-                    <p class="feedback__content-text">“We have been able to cancel so many other subscriptions since using 
-                        Manage. There is no more cross-channel confusion and everyone is much 
+                    <p class="feedback__content-text">“We have been able to cancel so many other subscriptions since
+                        using
+                        Manage. There is no more cross-channel confusion and everyone is much
                         more focused.”</p>
                 </div>
-               <div data-slideNum=2 class="feedback__content">
+                <div class="feedback__content">
                     <img src="images/avatar-anisha.png" alt="ali" class="feedback__content-image">
                     <h5 class="feedback__content-heading">Anisha Li</h5>
-                    <p class="feedback__content-text">“Manage has supercharged our team’s workflow. The ability to maintain 
+                    <p class="feedback__content-text">“Manage has supercharged our team’s workflow. The ability to
+                        maintain
                         visibility on larger milestones at all times keeps everyone motivated.”</p>
-                </div> 
-                <div data-slideNum=3 class="feedback__content test">
+                </div>
+                <div class="feedback__content feedback__content--active">
                     <img src="images/avatar-richard.png" alt="ali" class="feedback__content-image">
                     <h5 class="feedback__content-heading">Richard Watts</h5>
-                    <p class="feedback__content-text">“Manage allows us to provide structure and process. It keeps us organized 
+                    <p class="feedback__content-text">“Manage allows us to provide structure and process. It keeps us
+                        organized
                         and focused. I can’t stop recommending them to everyone I talk to!”</p>
                 </div>
-                <div data-slideNum=4 class="feedback__content">
+                <div class="feedback__content">
                     <img src="images/avatar-shanai.png" alt="ali" class="feedback__content-image">
                     <h5 class="feedback__content-heading">Shanai Gough</h5>
-                    <p class="feedback__content-text">“Their software allows us to track, manage and collaborate on our projects 
+                    <p class="feedback__content-text">“Their software allows us to track, manage and collaborate on our
+                        projects
                         from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
                 </div>
             </article>
-                <div class="feedback__slider">
-                    <div data-dotNum="1" class="feedback__slider-dot"></div>
-                    <div data-dotNum="2" class="feedback__slider-dot"></div>
-                    <div data-dotNum="3" class="feedback__slider-dot active"></div>
-                    <div data-dotNum="4" class="feedback__slider-dot"></div>
-                </div>
+            <div class="feedback__slider">
+                <div class="feedback__slider-dot"></div>
+                <div class="feedback__slider-dot"></div>
+                <div class="feedback__slider-dot feedback__slider-dot--active"></div>
+                <div class="feedback__slider-dot"></div>
+            </div>
             <button class="get-started-button">Get Started</button>
             <footer class="feedback-footer">
                 <h3 class="feedback-footer__heading">Simplify how your team works today.</h3>
                 <button class="get-started-button get-started-button--white">Get Started</button>
-                
+
             </footer>
         </section>
     </main>
+    <!-- ####################################################################################
+                                        Footer
+    #################################################################################### -->
     <footer class="page-footer">
         <div class="page-footer__form-container">
             <div class="page-footer__form">
                 <div class="test">
-                    <input type="email" name="email" id="email" class="page-footer__form-input" placeholder="Update in your inbox...">
+                    <input type="email" name="email" id="email" class="page-footer__form-input"
+                        placeholder="Update in your inbox...">
                     <button class="get-started-button get-started-button--footer">Go</button>
                 </div>
                 <p class="page-footer__form-error"></p>
-            </div> 
+            </div>
             <p class="page-footer__copyright-desktop">Copyright 2020. All Rights Reserved</p>
         </div>
 
-       <div class="page-footer__links">
+        <div class="page-footer__links">
             <ul class="page-footer__links-left-links">
                 <li class="page-footer__links-item">Home</li>
                 <li class="page-footer__links-item">Pricing</li>
@@ -169,14 +191,14 @@
                 <li class="page-footer__links-item">Community</li>
                 <li class="page-footer__links-item">Privacy Policy</li>
             </ul>
-       </div>
-       <div class="page-footer__icons-container">
-           <div class="page-footer__social">
-               <i class="fa-brands fa-facebook fa-2xl page-footer__social-icon"></i>
-               <i class="fa-brands fa-youtube fa-2xl page-footer__social-icon"></i>
-               <i class="fa-brands fa-twitter fa-2xl page-footer__social-icon"></i>
-               <i class="fa-brands fa-pinterest fa-2xl page-footer__social-icon"></i>
-               <i class="fa-brands fa-instagram fa-2xl page-footer__social-icon"></i>
+        </div>
+        <div class="page-footer__icons-container">
+            <div class="page-footer__social">
+                <i class="fa-brands fa-facebook fa-2xl page-footer__social-icon"></i>
+                <i class="fa-brands fa-youtube fa-2xl page-footer__social-icon"></i>
+                <i class="fa-brands fa-twitter fa-2xl page-footer__social-icon"></i>
+                <i class="fa-brands fa-pinterest fa-2xl page-footer__social-icon"></i>
+                <i class="fa-brands fa-instagram fa-2xl page-footer__social-icon"></i>
             </div>
             <img src="images/logo-white.svg" alt="logo" class="page-footer__logo">
         </div>

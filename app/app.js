@@ -7,8 +7,8 @@ const dot = document.querySelectorAll('.feedback__slider-dot');
 const email = document.querySelector('.page-footer__form-input');
 const formBtn = document.querySelector('.get-started-button--footer');
 const error = document.querySelector('.page-footer__form-error');
-
 const correctEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/;
+let i = 0;
 
 const checkEmail = () => {
 	if (email.value.match(correctEmail)) {
@@ -20,11 +20,8 @@ const checkEmail = () => {
 		error.innerHTML = 'Please insert a valid email!';
 		error.classList.add('page-footer__form-error--error');
 		email.classList.add('page-footer__form-input--error');
-		// error.style.color = 'red'
 	}
 };
-
-formBtn.addEventListener('click', checkEmail);
 
 const toggleMenu = () => {
 	if (mobileMenu.classList.contains('main-nav__items--active')) {
@@ -40,17 +37,13 @@ const toggleMenu = () => {
 	shadow.classList.toggle('shadow--active');
 };
 
-console.log(window.innerWidth);
-
-let i = 0;
-
 setInterval(() => {
 	setInterval(() => {
-		feedback[i].classList.add('test');
-		dot[i].classList.add('active');
+		feedback[i].classList.add('feedback__content--active');
+		dot[i].classList.add('feedback__slider-dot--active');
 		setTimeout(() => {
-			feedback[i].classList.remove('test');
-			dot[i].classList.remove('active');
+			feedback[i].classList.remove('feedback__content--active');
+			dot[i].classList.remove('feedback__slider-dot--active');
 		}, 5000);
 	}, 6000);
 
@@ -62,3 +55,4 @@ setInterval(() => {
 }, 6000);
 
 toggleBtn.addEventListener('click', toggleMenu);
+formBtn.addEventListener('click', checkEmail);

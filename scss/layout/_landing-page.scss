@@ -45,17 +45,13 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		// max-width: f.rem(700);
-		// width: clamp(350px, 350px + 28vw, 570px);
 		width: 80%;
 		max-width: 450px;
 		z-index: -1;
-		// clip: rect(0, auto, auto, 0);
 
 		@include b.break('medium') {
 			right: f.rem(-50);
 			top: f.rem(-200);
-			// transform: translate(-50px, -200px);
 			max-width: 800px;
 		}
 
@@ -64,13 +60,7 @@
 			max-width: f.rem(800);
 			right: 0;
 			top: 0;
-			// transform: translate(60px, -160px);
 		}
-
-		// @include b.break('x-large') {
-		//     max-width: f.rem(900);
-		//     // top: f.rem(-250);
-		// }
 	}
 
 	&__content {

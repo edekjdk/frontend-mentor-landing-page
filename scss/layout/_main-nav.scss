@@ -77,8 +77,6 @@
 }
 
 .get-started-button {
-	// display: none;
-
 	@include b.break('large') {
 		display: block;
 	}
