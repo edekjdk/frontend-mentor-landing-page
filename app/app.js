@@ -29,9 +29,12 @@ formBtn.addEventListener('click', checkEmail);
 const toggleMenu = () => {
 	if (mobileMenu.classList.contains('main-nav__items--active')) {
 		toggleBtnImg.setAttribute('src', 'images/icon-hamburger.svg');
-		document.body.style.overflow = 'hidden';
+		document.body.style.overflow = 'visible';
+		document.documentElement.style.overflow = 'visible';
 	} else {
 		toggleBtnImg.setAttribute('src', 'images/icon-close.svg');
+		document.body.style.overflow = 'hidden';
+		document.documentElement.style.overflow = 'hidden';
 	}
 	mobileMenu.classList.toggle('main-nav__items--active');
 	shadow.classList.toggle('shadow--active');

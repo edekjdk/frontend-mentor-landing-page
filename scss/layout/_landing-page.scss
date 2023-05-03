@@ -4,11 +4,12 @@
 .landing-page {
 	display: grid;
 	grid-template-rows: auto 1fr;
-	height: 88vh;
+	height: 100%;
 
 	@include b.break('large') {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 100%;
+		height: 88vh;
 	}
 
 	&__images {
