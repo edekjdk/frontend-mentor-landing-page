@@ -26,12 +26,12 @@ const checkEmail = () => {
 const toggleMenu = () => {
 	if (mobileMenu.classList.contains('main-nav__items--active')) {
 		toggleBtnImg.setAttribute('src', 'images/icon-hamburger.svg');
-		document.body.style.overflow = 'visible';
-		document.documentElement.style.overflow = 'visible';
+		document.body.style.overflowY = 'visible';
+		document.documentElement.style.overflowY = 'visible';
 	} else {
 		toggleBtnImg.setAttribute('src', 'images/icon-close.svg');
-		document.body.style.overflow = 'hidden';
-		document.documentElement.style.overflow = 'hidden';
+		document.body.style.overflowY = 'hidden';
+		document.documentElement.style.overflowY = 'hidden';
 	}
 	mobileMenu.classList.toggle('main-nav__items--active');
 	shadow.classList.toggle('shadow--active');
